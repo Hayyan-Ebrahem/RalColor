@@ -1,0 +1,28 @@
+<?php
+$options = $block->getAllRalColor();
+
+// $datacollection=$model->getCollection();
+?>
+<span class="select_span">Select Color: </span>
+<select id="ral_color_drop_down_options" class="ral_color_drop_down_options" >
+  <?php foreach ($options as $option) : ?>
+    <option value="<?php /* @escapeNotVerified */ echo $option['value'] ?>" style="background-color:<?php /* @escapeNotVerified */ echo $option['label'] ?>">
+    <?php /* @escapeNotVerified */ echo $option['label'] ?>
+    </option>
+  <?php endforeach; ?>
+</select>
+<input type="hidden" name="ral_color" value="" />
+
+<script>
+
+require(['jquery'],
+    function ($) {
+        $(document).ready(function() {
+                  $('select[id=ral_color_drop_down_options]').change(function () {
+                    $("input[name='ral_color']").val( $(this).val());
+
+                      // alert($(this).val());
+                  });
+    });
+})
+</script>

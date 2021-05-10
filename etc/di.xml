@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Magegro\RalColor\Api\Data\RalColorInterface" type="Magegro\RalColor\Model\RalColor"/>
+    <preference for="Magegro\RalColor\Api\RalColorRepositoryInterface" type="Magegro\RalColor\Model\RalColorRepository"/>
+    <preference for="Magegro\RalColor\Api\ProductRepositoryInterface" type="Magegro\RalColor\Model\ProductRepository"/>
+    <preference for="Magegro\RalColor\Api\Data\RalColorSearchResultInterface" type="Magegro\RalColor\Model\RalColorSearchResult"/>
+
+
+    <type name="Magento\Catalog\Api\Data\ProductInterface">
+        <plugin name="ProductExtensionAttributeOperations" type="Magegro\RalColor\Plugin\Product\ProductAttributesLoad"/>
+    </type>
+
+    <type name="Magento\Catalog\Api\ProductRepositoryInterface">
+        <plugin name="RalColorProductExtensionAttribute" type="Magegro\RalColor\Model\Plugin\ProductGet"/>
+    </type>
+</config>

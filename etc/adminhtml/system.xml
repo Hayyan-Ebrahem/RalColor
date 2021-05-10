@@ -1,0 +1,14 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Store_Openings_Time_Config" translate="label" class="a-custom-css-class-to-style-this-tab" sortOrder="50">
+            <label>A meaningful label</label>
+        </tab>
+
+        <section id="magegro_store_openingstime_general" showInDefault="1" showInWebsite="0" showInStore="1" sortOrder="50" translate="label">
+            <label>Magegro Openings Time</label>
+            <tab>Store_Openings_Time_Config</tab>
+            <resource>VENDOR_MODULE::path_to_the_acl_resource</resource>
+           
+        </section>
+    </system>
+</config>
