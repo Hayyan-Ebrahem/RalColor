@@ -8,7 +8,8 @@ interface RalColorInterface extends \Magento\Framework\Api\ExtensibleDataInterfa
     /**#@+
      * Constants for keys of data array. Identical to the name of the getter in snake case
      */
-    const RAL_COLOR_ID = 'ral_color_id';
+    const RAL_COLOR_ID = 'id';
+
     const RAL_COLOR_NAME = 'ral_color_name';
     const RAL_COLOR_HEX = 'ral_color_hex';
 
@@ -44,20 +45,20 @@ interface RalColorInterface extends \Magento\Framework\Api\ExtensibleDataInterfa
      */
     public function setRalColorHex($ralColorHex);
 
-    // /**
-    //  * Return the ral color code.
-    //  *
-    //  * @return string RalColorCode .
-    //  */
-    // public function getRalColorCode();
+    /**
+     * Return the ral color name.
+     *
+     * @return string RalColorName .
+     */
+    public function getRalColorName();
 
-    //     /**
-    //  * Set ral color hex
-    //  *
-    //  * @param string $RalColorCode
-    //  * @return $this
-    //  */
-    // public function setRalColorCode($RalColorCode);
+        /**
+     * Set ral color name
+     *
+     * @param string $RalColorName
+     * @return $this
+     */
+    public function setRalColorName($RalColorName);
 
 
     /**
